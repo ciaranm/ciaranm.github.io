@@ -23,30 +23,58 @@
         <img src="mugshot.jpg" align="right" alt="Mugshot" style="padding: 2em 4em 2em 4em;" />
 
         <ul>
-            <li>Postdoctoral research associate working on <a
+            <li>Currently a postdoctoral researcher working on <a
                 href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/P026842/1">modelling and optimisation with
-                graphs</a>, doing the bidding of <a href="http://dcs.gla.ac.uk/~pat/">Patrick Prosser</a> in the <a
+                graphs</a>. I will be starting as a lecturer in the <a
                 href="https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/">Formal Analysis,
-                Theory and Algorithms</a> and <a href="http://www.dcs.gla.ac.uk/research/gpg/">Parallelism</a> groups in
+                Theory and Algorithms</a> groups in
                 the <a href="http://www.gla.ac.uk/schools/computing/">School of Computing Science</a> at the <a
-                href="http://www.gla.ac.uk/">University of Glasgow</a>.</li>
+                href="http://www.gla.ac.uk/">University of Glasgow</a> in April 2021.</li>
             <li>Email: ciaran.mccreesh at glasgow.ac.uk .</li>
-            <!-- <li>Office: F142 Lilybank Gardens. Enter through the Sir Alwyn Williams building (<a
+            <li>Office: <span style="text-decoration: line-through">F142 Lilybank Gardens. Enter through the Sir Alwyn Williams building (<a
             href="http://www.gla.ac.uk/media/media_1887_en.pdf">campus map D20</a>), through the glass double doors, up
-            one and a half a flight of stairs to the floor marked F, and along the corridor a bit.</li> -->
+        one and a half a flight of stairs to the floor marked F, and along the corridor a bit.</span></li>
         </ul>
 
         <h2>Research interests</h2>
-        <ul>
-            <li>Solving (NP) hard problems in practice, particularly combinatorial optimisation and graph theory
-            problems.</li>
-            <li>Understanding computational complexity starting from science and experiments, rather than axioms: what
-            makes hard problems really hard in practice, and how does this help us design better algorithms?</li>
-            <li>Empirical algorithmics and algorithm engineering, with a particular focus on how we can engineer trustworthy
-                or certifying algorithms.</li>
-            <li>Constraint programming and old-school, uncool artificial intelligence.</li>
-            <li>Parallel search for branch and bound algorithms, and parallelism for intelligent backtracking search.</li>
-        </ul>
+            <p>
+                I'm interested in solving hard combinatorial problems in practice, particularly in the areas of graph
+                theory and subgraph finding. Theoretically, these problems should take exponential time to solve, but in
+                practice algorithms based upon <strong>symbolic artificial intelligence techniques</strong> like
+                <strong>constraint programming</strong> and <strong>boolean satisfiability</strong>
+                can often exactly solve large instances very quickly. My main research questions are:</p>
+
+            <ul>
+                <li>What can we do to close the gap between theoretical worst-case results, and what we see in practice?
+                I am particularly interested in using <strong>empirical algorithmics</strong>
+                and computational and scientific experiments to gain an understanding that can't be reached through
+                theory alone.</li>
+
+                <li>Can we use empirical algorithmics techniques to <strong>design better algorithms</strong>? For example,
+                    can we measure what solvers are doing during search, and use this to improve performance when a solver
+                    encounters an instance it finds hard? I have also worked on <strong>exploiting parallel hardware</strong>
+                    such as <strong>bit-parallelism</strong>, <strong>multi-core parallelism</strong> and <strong>high
+                        performance computing</strong> to accelerate algorithm performance.</li>
+
+                <li>Why should we <strong>trust</strong> the outputs of these algorithm implementations? Solvers are increasingly
+                    being used autonomously in ways which directly affect people's safety, lives, and livelihoods, without human
+                    oversight. However, we know that most solvers are buggy, and will occasionally output an incorrect answer.
+                    Conventional software engineering testing techniques fail to detect these bugs, and formal methods are too
+                    expensive to use in practice. Some of my recent research looks at <strong>proof logging</strong> or
+                    <strong>certifying</strong> as an alternative. The idea is that alongside an output, a solver produces a
+                    <strong>mathematical proof</strong> that this answer is correct, which can be <strong>stored and audited by
+                        a third party</strong>.</li>
+
+                <li>How can we make techniques developed in constraint programming and related areas <strong>more accessible to
+                        developers</strong>? We know, for example, that vanilla backtracking search is a bad idea, but techniques
+                    like restarts and nogood recording are not widely implemented due to the difficulty in programming them
+                    correctly. Similarly, we know how to do parallel search in theory, but few algorithm implementations actually
+                    do this. Could we develop libraries or algorithm skeletons to help?</li>
+
+                <li>More broadly, can we develop a discipline of <strong>algorithm engineering</strong> that focuses on how to
+                    design and implement small, efficient, correct pieces of code, rather than the large systems with uncertain
+                    requirements usually covered by software engineering?</li>
+            </ul>
 
         <h2>Source code</h2>
         <ul>
@@ -63,7 +91,7 @@
             <li> Stephan Gocht, Ross McBride, Ciaran McCreesh, Jakob Nordstr&ouml;m,
                 Patrick Prosser and James Trimble: <strong>Certifying Solvers for Clique and Maximum
                     Common (Connected) Subgraph Problems.</strong>
-                <br /> To appear at CP 2020.
+                <br /> CP 2020.
                 <br />[<a href="papers/cp2020-certifying-clique-mcs.pdf">author-final PDF</a>]</li>
             <li>Ciaran McCreesh, Patrick Prosser and James Trimble: <strong>The Glasgow Subgraph Solver: Using Constraint Programming to Tackle Hard Subgraph Isomorphism Problem Variants.</strong>
                 <br /> Tool paper. ICGT 2020.
