@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>fatanode Usage Instructions</title>
+        <style type="text/css"><!--
+            @import url(http://fonts.googleapis.com/css?family=Merriweather);
+            body {
+                font-family: 'Merriweather', serif;
+                background-color: #dddddd;
+                color: #333333;
+                margin-left: 3em;
+                margin-bottom: 5em;
+            }
+
+            li {
+                margin: 0.5em 0em;
+            }
+
+            //--></style>
+    </head>
+    <body>
+        <h1>fatanode Usage Instructions</h1>
+
+        <p>The fatanode cluster consists of:</p>
+        <ul>
+            <li>Twelve compute nodes, hostnames <code>fatanode-01</code> through <code>fatanode-12</code>. Each node
+                has dual Intel Xeon E5-2697A v4 CPUs with thermal scaling disabled, 512GBytes RAM,
+                and (currently) runs Ubuntu 18.04. MPI, OpenMP, C++ native threads and pthreads are available.</li>
+            <li>A head node, <code>fatanode-head</code>, which can be used for job coordination etc.</li>
+            <li>A storage node, <code>fatanode-data</code>, whose disks can be accessed through any of the other nodes.</li>
+        </ul>
+
+        <p><strong>The cluster will be taken down and wiped for a reinstall and upgrade to Ubuntu 20.04 sometime in March
+            2021.</strong> Expect all local data to be wiped, and up to a week of downtime.</p>
+
+        <p>Access to the cluster is managed cooperatively through <a
+            href="https://calendar.google.com/calendar/embed?src=m0m58oao2tdjop3iri2c9beoto%40group.calendar.google.com&ctz=Europe%2FLondon">a
+            shared Google calendar</a>. To gain access to this calendar, talk to Ciaran McCreesh, Blair Archibald,
+        or William Pettersson. You will need to provide an email address that has an associated Google account. Alternatively,
+        for occasional one-off bookings, we can make them on your behalf. Please book only the time you need, rather than
+        speculative block bookings in case you have a last minute panic. If you do have a last minute panic and there are
+        people using the cluster, we can usually interrupt what we're doing for you. The cluster isn't really suitable for
+        interactive use. (When you see bookings that last for weeks, that's because we're running stuff that takes that long.
+        You're welcome to do this too.)</p>
+
+        <p>If you already have a department Unix account, it should work on the cluster nodes too. If you don't, or it
+            doesn't work, email support-socs requesting access. To access the machines, you will need to either VPN in
+            to the School, or connect via the ssh gateway. You cannot access the machines directly from outside.</p>
+
+        <p>Your usual Unix home directory is available. If you need more space, you can make yourself a directory in
+        either <code>/scratch</code> or <code>/cluster</code>. The <code>/cluster</code> directory is shared between
+        all the nodes using NFS. If you're doing anything I/O intensive, such
+        as doing a big git checkout or taring up your results directory, you can ssh onto <code>fatanode-data</code> and things
+        will run faster on there. We don't book <code>fatanode-data</code> in the calendar. Be aware that
+        <strong>neither <code>/scratch</code> nor <code>/cluster</code> is backed up</strong>, and you should only
+        use them for temporary files.</p>
+
+        <p>If you need software installed that you can't run from your home directory, you can ask support-socs to install
+        it. Please CC in Ciaran so we can keep track of what we have and why.</p>
+
+        <p>These machines are optimised for parallel compute loads, and so single core runtimes are probably slower than a recent desktop machine.
+        Using the fatanodes is probably only a good idea if you're using software that parallelises well, or if you can run many jobs
+        simultaneously. Training on how to do this is available from Ciaran or Blair. If you can't scale past four cores, you
+        may be better using a spare postgrad PC for experiments.</p>
+
+        <p>For Java users: you should probably turn off parallel GC, and limit each VM's RAM to something like 32GBytes, or
+        the JVM will behave very badly.</p>
+
+        <p>It is helpful if we know what you're running on the cluster, so we can tell everyone how widely used and
+            useful it is for supporting research and justify buying more hardware. If you can, please email Ciaran with
+            a one paragraph description of what you've used the cluster for and any related outputs.</p>
+    </body>
+</html>
+<!-- vim: set sw=4 sts=4 et tw=120 spell spelllang=en : -->
