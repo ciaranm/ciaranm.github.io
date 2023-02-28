@@ -19,7 +19,7 @@
             //--></style>
     </head>
     <body>
-        <h1>fatanode Usage Instructions</h1>
+        <h1>fatanode and fataepyc Usage Instructions</h1>
 
         <p>The fatanode cluster consists of:</p>
         <ul>
@@ -30,12 +30,22 @@
             <li>A storage node, <code>fatanode-data</code>, whose disks can be accessed through any of the other nodes.</li>
         </ul>
 
+        <p>The fataepyc cluster consists of:</p>
+        <ul>
+            <li>Four compute nodes, hostnames <code>fataepyc-01</code> through <code>fataepyc-18</code>. Each node
+                has dual AMD EPYC 7643 CPUs with thermal scaling disabled, 2TBytes RAM,
+                and (currently) runs Ubuntu 22.04. MPI, OpenMP, C++ native threads and pthreads are available.</li>
+            <li>A head node, <code>fataepyc-head</code>, which can be used for job coordination etc.</li>
+            <li>A storage node, <code>fataepyc-data</code>, whose disks can be accessed through any of the other nodes.</li>
+        </ul>
+
         <p>Access to the cluster is managed cooperatively through <a
             href="https://calendar.google.com/calendar/embed?src=m0m58oao2tdjop3iri2c9beoto%40group.calendar.google.com&amp;ctz=Europe%2FLondon">a
             shared Google calendar</a>. To gain access to this calendar, talk to Ciaran McCreesh, Blair Archibald,
         or William Pettersson. You will need to provide an email address that has an associated Google account. Alternatively,
         for occasional one-off bookings, we can make them on your behalf. You can book nodes by creating a calendar entry
-        for the time you want, stating your name and which nodes you are using in the title of the entry.</p>
+        for the time you want, stating your name and which nodes you are using in the title of the entry. Please use an entry
+        like <code>node01-10</code> for the fatanodes, and <code>epyc01-02</code> for the fataepycs.</p>
 
         <p>Please book only the time you need, rather than speculative block bookings in case you have a last minute panic.
         If you do have a last minute panic and there are people using the cluster, emailing and asking nicely will usually
@@ -49,9 +59,10 @@
 
         <p>Your usual Unix home directory is available. If you need more space, you can make yourself a directory in
         either <code>/scratch</code> or <code>/cluster</code>. The <code>/cluster</code> directory is shared between
-        all the nodes using NFS. If you're doing anything I/O intensive, such
-        as doing a big git checkout or taring up your results directory, you can ssh onto <code>fatanode-data</code> and things
-        will run faster on there. We don't book <code>fatanode-data</code> in the calendar. Be aware that
+        all the nodes using NFS (and is different between the two clusters). If you're doing anything I/O intensive, such
+        as doing a big git checkout or taring up your results directory, you can ssh onto <code>fatanode-data</code>
+        or <code>fataepyc-data</code> and things
+        will run faster on there. We don't book the data nodes or the head nodes in the calendar. Be aware that
         <strong>neither <code>/scratch</code> nor <code>/cluster</code> is backed up</strong>, and you should only
         use them for temporary files.</p>
 
