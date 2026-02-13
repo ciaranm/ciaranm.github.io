@@ -26,48 +26,59 @@
         <h2>Background and Purpose</h2>
 
             <p>
-                Since the turn of the millennium there have been dramatic improvements in algorithms for combinatorial
-                solving and optimization. The flipside of this is that as the methods get increasingly more
-                sophisticated and complex, it becomes increasingly hard to avoid bugs sneaking in during algorithm
-                design and implementation, and even the most mature tools currently available struggle with incorrect
-                results. Software testing, while important, has not been sufficient to resolve this problem, and formal
-                verification methods are far from being able to scale to the level of complexity in modern combinatorial
-                solvers. During the last twenty years the Boolean satisfiability (SAT) solving community has instead
-                spearheaded the use of proof logging, meaning that the SAT solvers have to output, along the answer to a
-                problem, a machine-verifiable proof that this answer is correct. Such solvers are also referred to as
-                certifying algorithms. For a long time, attempts to extend proof logging to stronger
-                paradigms in combinatorial solving and optimization have met with limited success, but
-                this has changed in the last few years, with proof logging now being possible for a
-                range of paradigms such as SAT-based optimisation (MaxSAT), Satisfiability Modulo
-                Theories (SMT), pseudo-Boolean optimisation, subgraph solving, constraint programming,
-                automated programming, integer linear programming, and dynamic programming.
-            </p>
+                Modern automated reasoning has transformed large parts of industry and has also found numerous
+                scientific applications. But many reasoning problems are computationally very challenging, or sometimes
+                even undecidable. Because of this, the algorithms used are getting increasingly complex, and even the
+                most mature tools currently available struggle with incorrect results. As these algorithms are
+                increasingly being used autonomously, sometimes even in life-critical applications, it is urgent to
+                ensure that what they compute is valid. Software testing, while important, has not been sufficient to
+                resolve this problem, and formal verification methods are far from being able to scale to the level of
+                complexity in modern algorithms.</p>
 
-            <p>
-                These developments have been so fast that in 2024 the fairly spontaneous idea arose to gather
-                researchers working on pseudo-Boolean proof logging to an informal gathering, which—reflecting the
-                rather improvised nature of the event—was named the <a href="https://jakobnordstrom.se/WHOOPS24/">1st Workshop on Highlights in Organizing and
-                    Optimizing Proof-logging Systems (WHOOPS '24)</a>. The <a href="https://jakobnordstrom.se/WHOOPS25/">second edition of the workshop</a> was held on
-                September 13-14 2025 in Orsay outside Paris under the auspices of <a href="https://europroofnet.github.io/wg2-symposium/">EuroProofNet</a>. In addition to offering a
-                healthy dose of pseudo-Boolean proof logging, the purpose of WHOOPS has evolved to provide a forum for
-                discussing certifying algorithms for automated reasoning more broadly, including satisfiability modulo
-                theories (SMT) solving and first- and higher-order theorem proving. The third edition of the workshop
-                will be held on 19th July 2026 as part of the Federated Logic Conference (FLoC '26), again with a
-                broader audience in mind.
-            </p>
+                <p>
+                    During the last twenty years, the Boolean satisfiability (SAT) solving community has instead
+                    spearheaded the use of <em>proof logging</em>, meaning that the SAT solvers have to output, along the answer
+                    to a problem, a machine-verifiable proof that this answer is correct. Such solvers are also referred
+                    to as <em>certifying algorithms</em>. For a long time, attempts to extend proof logging to stronger paradigms
+                    in automated reasoning met with limited success. This has changed in the last few years, however,
+                    with proof logging techniques now being developed for a wide range of paradigms such as SAT-based
+                    and pseudo-Boolean optimisation, subgraph solving, constraint programming, automated planning, mixed
+                    integer linear programming, and even satisfiability modulo theories (SMT) solving and automated
+                    theorem proving.
+                </p>
 
-        <h2>Call for Contributed Talks</h2>
+                <p>
+                These developments have been so fast that in 2024 the fairly spontaneous idea arose to celebrate the
+                latest advances during an informal workshop, which—reflecting the rather improvised nature of the
+                event—was named the <a href="https://jakobnordstrom.se/WHOOPS24/">1st Workshop on Highlights in Organizing and Optimizing Proof-logging Systems
+                    (WHOOPS '24)</a>. The second edition <a href="https://jakobnordstrom.se/WHOOPS25/">WHOOPS '25</a>
+                was held last autumn under the auspices of <a href="https://europroofnet.github.io/wg2-symposium/">EuroProofNet</a>.</p>
+
+                <p>
+                The third instalment of the workshop series, to be held on July 19, 2026, as part of the
+                <a href="https://www.floc26.org/">
+                    Federated Logic Conference (FLoC '26)</a>,
+                will continue to expand the range of topics beyond SAT and pseudo-Boolean proof logging to provide
+                a forum for discussing certifying algorithms for automated reasoning more broadly. In addition to
+                ensuring correctness of outputs for automated reasoning algorithms, we also hope to discuss the use
+                of proof logging to provide new tools for algorithm development and analysis, software debugging,
+                and even research into explainability in the context of AI.
+                </p>
+
+                <h2>Call for Contributed Talks</h2>
 
             <p>
                 The purpose of the third edition of WHOOPS is to bring together researchers interested in certification
                 for combinatorial algorithms and automated reasoning. We solicit contributed talks that will be of
                 interest to this audience, on topics which could include:
             </p>
+
             <ul>
                 <li>The theory or practice of proof logging systems;</li>
                 <li>Bringing proof logging to existing or new solving tools;</li>
                 <li>Descriptions of challenges anticipated or encountered;</li>
                 <li>Integrating proof logging into larger verification frameworks;</li>
+                <li>Connections between proof logging and explainability;</li>
                 <li>Speculation about or requests for future directions for proof logging and certification</li>
             </ul>
 
@@ -88,7 +99,7 @@
 
         <ul>
             <li>Ciaran McCreesh, University of Glasgow</li>
-            <li>Jakob Nordstr&ouml;m, Lund University / University of Copenhagen</li>
+            <li>Jakob Nordstr&ouml;m, University of Copenhagen and Lund University</li>
             <li>TBC</li>
         </ul>
 
